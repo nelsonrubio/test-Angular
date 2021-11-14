@@ -1,0 +1,37 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon
+          mat-list-icon
+          class="chevron-button sidenav-button"
+          (click)="isExpanded = !isExpanded"
+          [ngClass]="{ rotated: isExpanded }"
+          >chevron_right</mat-icon
+        >
+      </mat-list-item>
+
+      <mat-list-item routerLink="/">
+        <mat-icon>person</mat-icon>
+        <span *ngIf="isExpanded">Personajes</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/estudiantes">
+        <mat-icon mat-list-icon>create</mat-icon>
+        <span *ngIf="isExpanded">Estudiantes</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/profesores">
+        <mat-icon>library_books</mat-icon>
+        <span *ngIf="isExpanded">Profesores</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div class="content">
+    <mat-toolbar>
+      <h4>Escuela de hechiceria</h4>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

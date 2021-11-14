@@ -1,5 +1,6 @@
 <div class="container">
   <mat-card>
+    <h4>Crear estudiantes</h4>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
@@ -21,7 +22,9 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <button type="submit" mat-raised-button color="primary">Primary</button>
+      <button type="submit" mat-raised-button color="primary" class="button">
+        Crear
+      </button>
     </form>
 
     <table mat-table [dataSource]="dataSource" matSort class="table">

@@ -34,7 +34,6 @@ estudianteForm = new FormGroup({
   }
 
   onSubmit() {
-    console.log(this.contactForm.value);
     if(this.contactForm.valid){
       this.estudiantes.push(this.contactForm.value)
       this.dataSource = new MatTableDataSource<any>(this.estudiantes);

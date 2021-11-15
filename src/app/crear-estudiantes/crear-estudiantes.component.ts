@@ -22,7 +22,7 @@ export class CrearEstudiantesComponent implements OnInit {
   dataSource = new MatTableDataSource<any>(this.estudiantes);
   @ViewChild(MatPaginator) paginator!: MatPaginator; ;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
-contactForm = new FormGroup({
+estudianteForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     patronus: new FormControl('', [Validators.required]),
     age: new FormControl('', [Validators.required]),

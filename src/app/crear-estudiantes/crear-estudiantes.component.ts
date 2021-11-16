@@ -39,7 +39,7 @@ estudianteForm = new FormGroup({
       this.dataSource = new MatTableDataSource<any>(this.estudiantes);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-      this.contactForm.reset();
+      this.estudianteForm.reset();
     }
   }
    

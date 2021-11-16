@@ -34,8 +34,8 @@ estudianteForm = new FormGroup({
   }
 
   onSubmit() {
-    if(this.contactForm.valid){
-      this.estudiantes.push(this.contactForm.value)
+    if(this.estudianteForm.valid){
+      this.estudiantes.push(this.estudianteForm.value)
       this.dataSource = new MatTableDataSource<any>(this.estudiantes);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
